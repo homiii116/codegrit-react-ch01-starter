@@ -1,11 +1,10 @@
-import { createElement, Component } from 'react'
+import React, { Component } from 'react'
 
 class App extends Component {
-
   render() {
-    const h1 = React.createElement('h1', null, 'これは一つ目のアプリです');
-    ReactDOM.render(h1, document.getElementById('root'));
-    return h1;
+    const dateApp = this.props.date;
+    const wordApp = 'これは一つ目のアプリです。';
+    return React.createElement('h1', null, `${wordApp} 今日は${dateApp}です。`);
   }
 }
 
